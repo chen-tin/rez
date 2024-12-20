@@ -1,0 +1,342 @@
+/* Base Font */
+@font-face {
+    font-family: "Linux Libertine";
+    src: url("fonts/LinLibertine_RZ.woff") format('woff');
+    font-display: swap;
+}
+
+/* CSS Reset & Base Styles */
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+body {
+    margin: 0;
+    background: url(img/body-top.png) repeat-x top left #f6f6f6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: #000;
+    background: none;
+    font-weight: normal;
+    margin: 0;
+    overflow: hidden;
+    padding-top: 0.5em;
+    padding-bottom: 0.17em;
+}
+
+.article h1 {
+    font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+    border-bottom: 1px solid #a2a9b1;
+    font-size: 2.3em;
+    line-height: 1.3;
+    margin-bottom: 0.25em;
+    padding: 0;
+    letter-spacing: 0;
+}
+
+.article h2 {
+    font-size: 1.6em;
+    margin: 0.5em 0;
+    font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+    border-bottom: 1px solid #a2a9b1;
+    line-height: 1.4em;
+    padding-bottom: 0;
+}
+
+.article h3 {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Sidebar Typography */
+.sidebar h3 {
+    font-size: 0.75em;
+    color: #4d4d4d;
+    font-weight: normal;
+    margin: 0.5em 0 0 0;
+    padding: 0.25em 0;
+    cursor: default;
+    border: 0;
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.sidebar li {
+    line-height: 1.125em;
+    margin: 0;
+    padding: 0.25em 0;
+    font-size: 0.75em;
+    word-wrap: break-word;
+}
+
+/* Links */
+a, a:visited {
+    color: #0645ad;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    text-decoration: underline;
+    outline: 0;
+}
+
+/* Layout */
+.wrapAll {
+    width: 100%;
+}
+
+.sidebar {
+    float: left;
+    width: 9em;
+    padding: 3px 1.5em 10px 1.3em;
+    position: absolute;
+}
+
+.mainsection {
+    margin: 0 0 0 11em;
+}
+
+/* Article Styles */
+.article {
+    padding: 1.25em 1.5em 1.5em;
+    border: 1px solid #a7d7f9;
+    border-right: none;
+    background: #FFF;
+    line-height: 1.6;
+    font-size: 0.875em;
+}
+
+.article p {
+    line-height: inherit;
+    margin: 0.5em 0;
+}
+
+.article p.roleNote {
+    padding: 1em 0 0 1.6em;
+    font-style: italic;
+}
+
+p.siteSub {
+    font-size: 92%;
+}
+
+/* Right Panel */
+.articleRight {
+    border: 1px solid #c8ccd1;
+    padding: 3px;
+    float: right;
+    background-color: #f8f9fa;
+    font-size: 94%;
+    text-align: center;
+    overflow: hidden;
+    line-height: 1.4em;
+    margin: 0 0 5px 15px;
+}
+
+.articleRightInner {
+    border: 1px solid #c8ccd1;
+    padding: 3px;
+    background-color: #f8f9fa;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Contents Panel */
+.contentsPanel {
+    border: 1px solid #a2a9b1;
+    background-color: #f8f9fa;
+    padding: 5px;
+    font-size: 95%;
+    position: relative;
+    line-height: 1.7em;
+    width: 280px;
+}
+
+.contentsHeader {
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Content Box Controls */
+.hidePanel, .showPanel {
+    float: right;
+    margin: 0 5px;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    color: #0645ad;
+    top: 4px;
+}
+
+.showPanel {
+    display: none;
+}
+
+.minimizedPanel .showPanel {
+    display: block;
+}
+
+.minimizedPanel .hidePanel {
+    display: none;
+}
+
+.contentsPanel.minimizedPanel {
+    width: 130px;
+}
+
+.minimizedPanel .contentsHeader {
+    text-align: left;
+}
+
+/* Lavender Box Styles */
+/* Lavender Box Styles */
+.lavenderBox {
+    background: #fdfdfd;
+    border: 1px solid #a2a9b1;
+    clear: both;
+    font-family: "Linux Libertine", "Georgia", "Times", serif; /* Matches Wikipedia's font style */
+    font-size: 1em; /* Standard font size */
+    text-align: center;
+    padding: 3px;
+    line-height: 1.6em; /* Adjusted line height for readability */
+    margin: 1em auto 0;
+}
+
+.lavenderBox .header {
+    background: #ccccff;
+    padding: 0.25em 1em;
+    line-height: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    color: #0645ad;
+    font-size: 115%;
+    margin-bottom: 3px;
+}
+
+.lavenderBox .subtitle {
+    background: #ddddff;
+    font-family: "Linux Libertine", "Georgia", "Times", serif; /* Match header font */
+}
+
+
+.linklist a:after {
+    content: " · ";
+    font-weight: bold;
+}
+
+.linklist a:last-child:after {
+    content: "";
+}
+
+.linklist a {
+    white-space: nowrap;
+}
+
+.contentsPanel ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 5px 5px;
+}
+
+.contentsPanel ul li span {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.contentsPanel ul li ul li {
+    padding: 0 0 0 25px;
+}
+
+/* Header Links */
+.headerLinks {
+    text-align: right;
+    padding: 0.8em 1.4em;
+    font-size: 0.72em;
+    color: #777;
+    letter-spacing: 0.017em;
+}
+
+.headerLinks a {
+    display: inline-block;
+    margin: 0 0 0 0.5em;
+}
+
+/* Categories */
+.categories {
+    border: 1px solid #a2a9b1;
+    background-color: #f8f9fa;
+    padding: 5px;
+    margin-top: 1em;
+    font-size: 1.1em;
+    clear: both;
+}
+
+.categories a:after {
+    content: "";
+    font-weight: bold;
+}
+
+.categories {
+    display: flex;
+    justify-content: center; /* Centers the items horizontally */
+    gap: 10px; /* Adds space between the links, adjust as needed */
+}
+
+.categories a:last-child:after {
+    content: "";
+}
+
+/* Footer */
+.pagefooter {
+    padding: 1.5em 1.3em 2em;
+    font-size: 75%;
+    line-height: 2em;
+}
+
+.pagefooter a {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 550px) {
+    .sidebar {
+        width: 6em;
+        padding: 3px 0.5em 10px 0.5em;
+    }
+    
+    .mainsection {
+        margin: 0 0 0 7em;
+    }
+    
+    .contentsPanel {
+        width: auto;
+    }
+}
+
+/* Image Handling */
+img {
+    border: 0;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* Utility Classes */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
