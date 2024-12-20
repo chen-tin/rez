@@ -1,6 +1,3 @@
-To improve the mobile responsiveness of your website, especially on phones, we'll need to adjust some of the layout elements, font sizes, and padding, ensuring that everything displays well on smaller screens. Here's an updated version of your CSS with mobile-specific adjustments. I'll focus on improving the layout and readability for smaller devices:
-
-```css
 /* Base Font */
 @font-face {
     font-family: "Linux Libertine";
@@ -354,19 +351,8 @@ p.siteSub {
 
     .lavenderBox {
         font-size: 0.9em;
-        padding
-
-: 2em 1em;
+        padding: 2em 1em;
         margin-top: 1.5em;
     }
 }
 
-```
-
-### Key Adjustments:
-1. **Mobile-Friendly Sidebar**: On smaller screens, the sidebar now spans 100% width, and the layout switches to a more mobile-friendly flow.
-2. **Improved Readability**: Font sizes, paddings, and margins are adjusted for better readability on mobile devices.
-3. **Flexbox for Categories**: Categories are displayed in a column format on smaller screens, making them more accessible.
-4. **Responsive Content Panels**: The content panels and lavender box adjust to be more compact and readable.
-
-Try this version and let me know if anything else needs tweaking!
