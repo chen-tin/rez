@@ -225,6 +225,7 @@ p.siteSub {
     font-family: "Linux Libertine", "Georgia", "Times", serif; /* Match header font */
 }
 
+
 .linklist a:after {
     content: " · ";
     font-weight: bold;
@@ -304,55 +305,120 @@ p.siteSub {
     margin-right: 1em;
 }
 
+/* Control Panel Styles */
+.controlPanel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #333;
+    color: white;
+    width: 250px; /* Default panel width for larger screens */
+    height: 100%;
+    padding: 1em;
+    display: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.controlPanel .togglePanelBtn {
+    background: #0645ad;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.controlPanel .panelContent {
+    padding: 1em 0;
+}
+
+.controlPanel ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.controlPanel ul li {
+    padding: 0.5em 0;
+}
+
+.controlPanel a {
+    color: white;
+    text-decoration: none;
+}
+
+.controlPanel a:hover {
+    text-decoration: underline;
+}
+
+/* Show Panel Styles */
+.showControlPanel .controlPanel {
+    display: block;
+    transform: translateX(0); /* Panel slides in horizontally */
+}
+
 /* Responsive Design */
-@media screen and (max-width: 550px) {
-    .sidebar {
-        width: 100%;
-        padding: 3px 1.5em;
-        position: relative;
-        float: none;
-    }
-
-    .mainsection {
-        margin: 0;
-    }
-
-    .article {
-        padding: 1.25em;
-        font-size: 0.9em; /* Slightly larger font for readability */
-    }
-
-    .contentsPanel {
-        width: 100%;
-        padding: 10px;
-        font-size: 1em; /* Adjust for readability */
-    }
-
-    .articleRight {
-        margin: 0;
-        float: none;
-        width: 100%;
-    }
-
-    .headerLinks {
-        font-size: 0.8em;
-        padding: 0.8em 1em;
-    }
-
-    .categories {
-        flex-direction: column; /* Stack categories vertically on small screens */
-        align-items: center;
-    }
-
-    .categories a {
-        font-size: 1em;
-        margin: 0.5em 0; /* Adjust spacing */
-    }
-
-    .lavenderBox {
-        font-size: 0.9em;
-        padding: 2em 1em;
-        margin-top: 1.5em;
+@media screen and (max-width: 768px) {
+    .controlPanel {
+        width: 200px; /* Adjust width for smaller screens */
     }
 }
 
+@media screen and (max-width: 550px) {
+    /* On small screens, make the control panel full width */
+    .controlPanel {
+        width: 100%;
+        transform: translateX(-100%); /* Start off-screen */
+    }
+
+    .showControlPanel .controlPanel {
+        transform: translateX(0); /* Slide in from the left */
+    }
+
+    /* Button for toggling the control panel */
+    .togglePanelBtn {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 1.5em;
+        background: #333;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1001; /* Ensure button is above the panel */
+    }
+
+    /* Sidebar Adjustment for Mobile */
+    .sidebar {
+        width: 6em;
+        padding: 3px 0.5em 10px 0.5em;
+    }
+    
+    .mainsection {
+        margin: 0 0 0 7em;
+    }
+
+    .contentsPanel {
+        width: auto;
+    }
+}
+
+/* Image Handling */
+img {
+    border: 0;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/* Utility Classes */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
